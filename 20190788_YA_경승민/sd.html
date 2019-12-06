@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>.item { color : blue}
+           .special {
+             width : 150px;
+             height: 150px;
+             border: 2px solid #0f0;}
+          #gallery {
+            width: 340px;
+            border: 2px solid black;
+            border-radius: 10px;
+          }
+          #gallery figure {
+            margin: 10px 20px;
+            color : red;
+          }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+  <!--아이디 선택자 예제1 -->
+    <script>
+      $(document).ready(function()
+    {
+      $("#id1").css("color","orange");
+      $("#name").css("border","2px solid blue");
+      $("#name").css("background","red");
+    });
+    </script>
+  <!--자식 선택자 예제2 -->
+    <script>
+    $(document).ready(function()
+  {
+    $("div>ul").css("border","1px solid blue");
+    $("ul").css("color","green");
+  });
+    </script>
+  <!--위치필터 예제3 -->
+  <script>
+  $(document).ready(function()
+{
+  $('tr:odd').css('background','#F9F9F9');
+  $('tr:even').css('background','#9F9F9F');
+  $('tr:first').css('background','#000').css('color','#FFF');
+  $('tr:last').css('font-weight','bold');
+});
+  </script>
+  <!--문서객체 필터링 예제5 -->
+  <script>
+  $(document).ready(function()
+{
+  $('h4:even').css({
+    backgroundColor : 'blue',
+    color : 'red'
+  });
+  $('h3').filter(' :even').css({
+    backgroundColor : 'orange',
+    color : 'white'
+  });
+});
+  </script>
+  <!--특정위치의 문서객체 선택 예제6 -->
+  <script>
+  $(document).ready(function(){
+    $('h3').eq(0).css('background','orange');
+    $('h3').eq(2).css('background','yellow');
+    $('h3').eq(-4).css('background','blue');
+    $('h3').eq(-1).css('background','red');
+  });
+  </script>
+  <!--문서객체의 속성추가 예제7 -->
+  <script>
+  $(document).ready(function(){
+    $('h1').addClass('item');
+  });
+  </script>
+  <!--문서객체의 속성검사와 추가 attr()예제9 -->
+  <script>
+  $(document).ready(function(){
+    var str = $('img').attr('src');
+    alert(str);
+  });
+  </script>
+  <!--show(),hide(),toggle() 메소드 예제1 -->
+  <script>
+  $(document).ready(function(){
+    $("p").click(function(){
+    $(this).hide();
+    });
+  });
+  </script>
+  <!-- 2.hide():버튼클릭시 이미지 사라지기 -->
+  <script>
+  $(document).ready(function( ){
+    $("button").click(function( ){
+     $("img").hide( );
+      });
+});
+  </script>
+  <!--show(),hide(),toggle() 메소드 예제1 -->
+  <script>
+  $(document).ready(function(){
+    $('#hide').click(function(){
+      $('.special').hide();
+    });
+    $('#show').click(function(){
+      $('.special').show();
+    });
+    $('#toggle').click(function(){
+      $('.special').toggle();
+    });
+  });
+  </script>
+<!--show(),hide(),toggle() 메소드 예제2 -->
+  <script>
+  $(document).ready(function(){
+    $("img").click(function(){
+      $("img").hide("fast");
+      $("#gallery").css("background-color","yellow");
+    });
+  });
+  </script>
+  <!--show(),hide(),toggle() 메소드 예제3 -->
+<script>
+  $(document).ready(function(){
+    $("#btn1").click(function(){
+      $("figure").hide(1000);
+      $("#gallery1").css("border","none");
+    });
+    $("#btn2").click(function(){
+      $("figure").show(1000);
+      $("#gallery1").css({
+        "border" : "2px solid black",
+        "border-radius" : "10px"
+      });
+    });
+  });
+  </script>
+  </head>
+  <body>
+<!--아이디 선택자 예제1 -->
+    <h1 id = "id1">동양미래대학교</h1>
+    <p>컴퓨터소프트웨어공학과</p>
+    <h1>1학년</h1>
+    <p id = "name">김최고</p>
+    <hr>
+<!--자식 선택자 예제2 -->
+    <div>
+        <ul>
+            <li>Apple
+               <ul>
+	<li>green apple</li>
+	<li>red apple</li>
+                </ul>
+            </li>
+            <li>Bag</li>
+            <li>Cat</li>
+            <li>Dog</li>
+            <li>Elephant</li>
+        </ul>
+    </div>
+    <hr>
+<!--위치필터 예제3 -->
+    <table>
+  <tr> <th>이름</th> <th>혈액형</th> <th>지역</th> </tr>
+  <tr> <td>kim</td> <td>AB형</td> <td>서울특별시 송파구</td> </tr>
+  <tr> <td>wang</td> <td>B형</td> <td>미국 캘리포니아</td> </tr>
+  <tr> <td>Lee</td> <td>AB형</td> <td>미국 메사추세츠</td> </tr>
+  <tr> <td>Jung</td> <td>O형</td> <td>서울 강서구</td> </tr>
+  <tr> <td>Jo</td> <td>A형</td> <td>서울 노량진구</td> </tr>
+  <tr> <td>Na</td> <td>B형</td> <td>서울 용산구</td> </tr>
+    </table>
+    <hr>
+<!--문서객체 필터링 예제5 -->
+        <h3>라면</h3>
+        <h3>김밥</h3>
+        <h3>돈가스</h3>
+        <h3>초밥</h3>
+        <h3>전복죽</h3>
+        <h3>만두국</h3>
+        <h4>짜장</h4>
+        <h4>짬뽕</h4>
+        <h4>탕수육</h4>
+        <h4>잡채</h4>
+        <hr>
+<!--특정위치의 문서객체 선택 예제6 -->
+            <h3>웹프로그래밍0</h3>
+            <h3>웹프로그래밍1</h3>
+            <h3>웹프로그래밍2</h3>
+            <h3>웹프로그래밍3</h3>
+            <h3>웹프로그래밍4</h3>
+            <h3>웹프로그래밍5</h3>
+            <hr>
+<!--문서객체의 속성추가 예제7 -->
+    <h1>겨울방학</h1>
+    <h1>아두이노</h1>
+    <h2>웹프로그래밍</h2>
+    <hr>
+    <!--문서객체의 속성검사와 추가 attr()예제9 -->
+    <img src ="d.jpg">
+    <hr>
+<!--show(),hide(),toggle() 메소드 예제1 -->
+<p>click me</p>
+<p>click me</p>
+<p>click me</p>
+  <form>
+    <input type = "button" id = "hide" value="그림 숨기기">
+    <input type = "button" id = "show" value="그림 보기">
+    <input type = "button" id = "toggle" value="그림 토글">
+</form>
+<div class ="special" id = "sun">
+  <img src = "d.jpg">
+</div>
+<hr>
+<!--2.hide():버튼클릭시 이미지 사라지기 -->
+<button>숨기기 </button>
+<br>
+<img src = "d.jpg">
+<hr>
+<!--show(),hide(),toggle() 메소드 예제2 -->
+<div id ="gallery">
+  <figure>
+    <img src ="d.jpg" width=300 height=200>
+    <figcaption><b>한국의 봄</b>
+      화사하게 피어난 분홍 매화꽃 </figcaption>
+    </figure>
+</div>
+<hr>
+<!--show(),hide(),toggle() 메소드 예제3 -->
+<button id = "btn1">hide</button>
+<button id = "btn2">show</button>
+<div id = "gallery1">
+  <figure>
+    <img src ="d.jpg" width="300" height="200">
+    <figcaption><b>한국의 봄</b>
+      화사한 분홍 매화꽃</figcaption>
+    </figure>
+  </div>
+  <hr>
+  </body>
+</html>
