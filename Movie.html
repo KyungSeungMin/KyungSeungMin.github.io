@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src ="http://code.jquery.com/jquery-3.3.1.js">
+    </script>
+    <script>
+    $(document).ready(function(){
+      $("#s1").click(function(){
+        $("#big1").fadeIn(1000);
+      });
+      $("#big1").click(function(){
+        $("#big1").fadeOut(1000);
+      });
+    });
+    $(document).ready(function(){
+      $("#s2").click(function(){
+        $("#big2").fadeIn(1000);
+      });
+      $("#big2").click(function(){
+        $("#big2").fadeOut(1000);
+      });
+    });
+    $(document).ready(function(){
+      $("#s3").click(function(){
+        $("#big3").fadeIn(1000);
+      });
+      $("#big3").click(function(){
+        $("#big3").fadeOut(1000);
+      });
+    });
+    $(document).ready(function(){
+      $("#s4").click(function(){
+        $("#big4").fadeIn(1000);
+      });
+      $("#big4").click(function(){
+        $("#big4").fadeOut(1000);
+      });
+    });
+    $(document).ready(function(){
+      $("#s5").click(function(){
+        $("#big5").fadeIn(1000);
+      });
+      $("#big5").click(function(){
+        $("#big5").fadeOut(1000);
+      });
+    });
+    $(document).ready(function(){
+      $("#s6").click(function(){
+        $("#big6").fadeIn(1000);
+      });
+      $("#big6").click(function(){
+        $("#big6").fadeOut(1000);
+      });
+    });
+    $(document).ready(function(){
+      $("#s7").click(function(){
+        $("#big7").fadeIn(1000);
+      });
+      $("#big7").click(function(){
+        $("#big7").fadeOut(1000);
+      });
+    });
+    $(document).ready(function(){
+      $("#s8").click(function(){
+        $("#big8").fadeIn(1000);
+      });
+      $("#big8").click(function(){
+        $("#big8").fadeOut(1000);
+      });
+    });
+    $(document).ready(function(){
+      $("#s9").click(function(){
+        $("#big9").fadeIn(1000);
+      });
+      $("#big9").click(function(){
+        $("#big9").fadeOut(1000);
+      });
+    });
+    $(document).ready(function(){
+      $("#s10").click(function(){
+        $("#big10").fadeIn(1000);
+      });
+      $("#big10").click(function(){
+        $("#big10").fadeOut(1000);
+      });
+    });
+    $(document).ready(function(){
+      $("#s11").click(function(){
+        $("#big11").fadeIn(1000);
+      });
+      $("#big11").click(function(){
+        $("#big11").fadeOut(1000);
+      });
+    });
+    $(document).ready(function(){
+      $("#s12").click(function(){
+        $("#big12").fadeIn(1000);
+      });
+      $("#big12").click(function(){
+        $("#big12").fadeOut(1000);
+      });
+    });
+    </script>
+    <style>
+    #gallery{
+      width: 1400px;
+      height: 300px;
+      background: #ff0;
+      border: 2px solid black;
+    }
+    #galler{
+      width: 1400px;
+      height: 300px;
+      background: #ff0;
+      border: 2px solid black;
+      margin-top: 10px;
+    }
+    ul {
+      list-style: none;
+    }
+    ul li {
+      display: inline;
+      float: left;
+      padding: 10px;
+    }
+    .bigPic{
+      position: absolute;
+      display: none;
+      left: 100px;
+      width: 400px;
+      height: 340px;
+    }
+    .smallpic{
+      border: 2px dotted red;
+      width: 200px;
+      height: 220px;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>영화</h1>
+    <ol>
+      <li>영화 포스터를 클릭하면 큰이미지가 나타납니다.</li>
+      <li>큰 이미지를 클릭하면 큰 이미지가 사라집니다.</li>
+    </ol>
+    <div id = "gallery">
+      <ul>
+        <li>
+          <img src = "movie1.jpg" id = "s1" class = "smallpic">
+          <img src = "movie1.jpg" id = "big1" class = "bigPic">
+        </li>
+        <li>
+          <img src = "movie2.jpg" id = "s2" class = "smallpic">
+          <img src = "movie2.jpg" id = "big2" class = "bigPic">
+        </li>
+        <li>
+          <img src = "movie3.jpg" id = "s3" class = "smallpic">
+          <img src = "movie3.jpg" id = "big3" class = "bigPic">
+        </li>
+        <li>
+          <img src = "movie4.jpg" id = "s4" class = "smallpic">
+          <img src = "movie4.jpg" id = "big4" class = "bigPic">
+        </li>
+        <li>
+          <img src = "movie5.jpg" id = "s5" class = "smallpic">
+          <img src = "movie5.jpg" id = "big5" class = "bigPic">
+        </li>
+        <li>
+          <img src = "movie6.jpg" id = "s6" class = "smallpic">
+          <img src = "movie6.jpg" id = "big6" class = "bigPic">
+        </li>
+      </ul>
+    </div>
+    <div id = "galler">
+      <ul>
+        <li>
+          <img src = "movie7.jpg" id = "s7" class = "smallpic">
+          <img src = "movie7.jpg" id = "big7" class = "bigPic">
+        </li>
+        <li>
+          <img src = "movie8.jpg" id = "s8" class = "smallpic">
+          <img src = "movie8.jpg" id = "big8" class = "bigPic">
+        </li>
+        <li>
+          <img src = "movie9.jpg" id = "s9" class = "smallpic">
+          <img src = "movie9.jpg" id = "big9" class = "bigPic">
+        </li>
+        <li>
+          <img src = "movie10.jpg" id = "s10" class = "smallpic">
+          <img src = "movie10.jpg" id = "big10" class = "bigPic">
+        </li>
+        <li>
+          <img src = "movie11.jpg" id = "s11" class = "smallpic">
+          <img src = "movie11.jpg" id = "big11" class = "bigPic">
+        </li>
+        <li>
+          <img src = "movie12.jpg" id = "s12" class = "smallpic">
+          <img src = "movie12.jpg" id = "big12" class = "bigPic">
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
