@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+    $(document).ready(function()
+  {
+    $('tr:odd').css('background','#F9F9F9');
+    $('tr:even').css('background','#9F9F9F');
+    $('tr:first').css('background','#000').css('color','#FFF');
+    $('tr:last').css('font-weight','bold');
+  });
+    </script>
+  </head>
+  <body>
+    <table>
+    <tr> <th>영화 제목</th> <th>극장</th> <th>날짜</th> <th>시간</th></tr>
+    <tr> <td>겨울왕국2</td> <td>부평CGV</td> <td>12월 8일</td> <td>08:00</td> </tr>
+    <tr> <td>기생충</td> <td>부평CGV</td> <td>12월 8일</td> <td>09:00</td> </tr>
+    <tr> <td>킹스맨 : 시크릿 에이전트</td> <td>부평CGV</td> <td>12월 8일</td> <td>15:00</td> </tr>
+    <tr> <td>킹스맨 : 골드서클</td> <td>부평CGV</td> <td>12월 8일</td> <td>15:00</td> </tr>
+    <tr> <td>마녀</td> <td>부평CGV</td> <td>12월 8일</td> <td>19:00</td> </tr>
+    <tr> <td>검사외전</td> <td>부평CGV</td> <td>12월 8일</td> <td>21:00</td> </tr>
+    </table>
+  </body>
+</html>
